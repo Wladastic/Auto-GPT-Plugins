@@ -74,6 +74,20 @@ Here are the steps to configure Auto-GPT Plugins.
         enabled: true
     ```
 
+1. **Alernate option to enable the plugins** (May cease to function at any point as the .env support for plugins may change)
+   
+   In your .env file add the lines below. If your plugins_config.yaml does not exist it should generate correctly when you run Auto-GPT based on what you populate below.
+   ```
+   ################################################################################
+   ### ALLOWLISTED PLUGINS
+   ################################################################################
+
+   #ALLOWLISTED_PLUGINS - Sets the listed plugins that are allowed (Example: plugin1,plugin2,plugin3)
+   ALLOWLISTED_PLUGINS=AutoGPTReddit
+
+   DENYLISTED_PLUGINS=AutoGPTBluesky,AutoGPTTelegram,AutoGPTEmailPlugin,AutoGPTNewsSearch,PlannerPlugin,AutoGPTSceneXPlugin,AutoGPTTwitter,AutoGPTWikipediaSearch,AutoGPTWolframAlphaSearch,AutoGPTSpacePlugin,AutoGPTBaiduSearch,AutoGPTBingSearch
+   ```
+   
 ## Plugins
 
 There are two categories of plugins: **first party** and **third party**.
@@ -102,6 +116,7 @@ You can see the first-party plugins below. These are included in this Auto-GPT-P
 | Planner          | Simple Task Planner Module for Auto-GPT  | [autogpt_plugins/planner](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/blob/master/src/autogpt_plugins/planner/) |
 | Random Values    | Enable Auto-GPT to generate various random numbers and strings.                                                    | [autogpt_plugins/random_values](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/random_values) |
 | SceneX           | Explore image storytelling beyond pixels with the Auto-GPT SceneX Plugin.                                        | [autogpt_plugins/scenex](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/scenex)               |
+| SerpApi          | Search on a broad range of search engines supported by SerpApi and get rich information from the results.        | [autogpt_plugins/serpapi](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/serpapi)|
 | Telegram |  A smoothly working Telegram bot that gives you all the messages you would normally get through the Terminal. | [autogpt_plugins/telegram](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/telegram) |
 | Twitter          | Auto-GPT is capable of retrieving Twitter posts and other related content by accessing the Twitter platform via the v1.1 API using Tweepy.               | [autogpt_plugins/twitter](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/twitter)           |
 | Wikipedia Search | This allows Auto-GPT to use Wikipedia directly.                                                                    | [autogpt_plugins/wikipedia_search](https://github.com/Significant-Gravitas/Auto-GPT-Plugins/tree/master/src/autogpt_plugins/wikipedia_search) |
@@ -117,6 +132,7 @@ Here is a non-comprehensive list of third-party plugins. If you have a plugin yo
 | Plugin       | Description     | Repository |
 |--------------|-----------------|-------------|
 | Alpaca-Trading | Trade stocks and crypto, paper or live with Auto-GPT | [danikhan632/Auto-GPT-AlpacaTrader-Plugin](https://github.com/danikhan632/Auto-GPT-AlpacaTrader-Plugin)|
+| AutoGPTReddit | Reddit Access | [NeonN3mesis/AutoGPTReddit](https://github.com/NeonN3mesis/AutoGPTReddit)|
 | AutoGPT User Input Request | Allow Auto-GPT to specifically request user input in continous mode | [HFrovinJensen/Auto-GPT-User-Input-Plugin](https://github.com/HFrovinJensen/Auto-GPT-User-Input-Plugin)|
 | BingAI | Enable Auto-GPT to fetch information via BingAI, saving time, API requests while maintaining accuracy. This does not remove the need for OpenAI API keys | [gravelBridge/AutoGPT-BingAI](https://github.com/gravelBridge/AutoGPT-BingAI)|
 | Crypto | Trade crypto with Auto-GPT | [isaiahbjork/Auto-GPT-Crypto-Plugin](https://github.com/isaiahbjork/Auto-GPT-Crypto-Plugin)|
@@ -128,6 +144,7 @@ Here is a non-comprehensive list of third-party plugins. If you have a plugin yo
 | Instagram | Instagram access | [jpetzke/AutoGPT-Instagram](https://github.com/jpetzke/AutoGPT-Instagram)|
 | Mastodon  | Simple Mastodon plugin to send toots through a Mastodon account | [ppetermann/AutoGPTMastodonPlugin](https://github.com/ppetermann/AutoGPTMastodonPlugin)|
 | MetaTrader | Connect your MetaTrader Account to Auto-GPT. | [isaiahbjork/Auto-GPT-MetaTrader-Plugin](https://github.com/isaiahbjork/Auto-GPT-MetaTrader-Plugin) |
+| Mindware | The App Store for AutoGPT. With one API key, unlock access to a growing list of plugins. | [open-mindware/AutoGPT-Mindware](https://github.com/open-mindware/AutoGPT-Mindware) |
 | Notion      | Notion plugin for Auto-GPT.  | [doutv/Auto-GPT-Notion](https://github.com/doutv/Auto-GPT-Notion) |
 | Slack | This plugin allows to receive commands and send messages to slack channels | [adithya77/Auto-GPT-slack-plugin](https://github.com/adithya77/Auto-GPT-slack-plugin)
 | Spoonacular | Find recipe insiprations using Auto-GPT | [minfenglu/Auto-GPT-Spoonacular-Plugin](https://github.com/minfenglu/Auto-GPT-Spoonacular-Plugin)
